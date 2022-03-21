@@ -1,5 +1,5 @@
 import React from "react";
-const Form = ({ form, handleChange, handleSubmit }) => {
+const Form = ({ form, id, handleChange, handleSubmit }) => {
   return (
     <div className="col-sm-6">
       <h1 align="center">Form</h1>
@@ -25,7 +25,7 @@ const Form = ({ form, handleChange, handleSubmit }) => {
       </div>
       <div className="form-group">
         <button className="btn btn-success" onClick={handleSubmit}>
-          {"Add"}
+          {id ? "Update" : "Add"}
         </button>
       </div>
     </div>

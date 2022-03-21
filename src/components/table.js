@@ -1,5 +1,5 @@
 import React from "react";
-const Table = ({ users, handleDelete }) => {
+const Table = ({ users, handleDelete, handleEdit }) => {
   const notFound = (
     <tr>
       <td></td>
@@ -27,7 +27,12 @@ const Table = ({ users, handleDelete }) => {
               <td>{user.name}</td>
               <td>{user.age}</td>
               <td>
-                <button className="btn btn-info">Edit</button>{" "}
+                <button
+                  className="btn btn-info"
+                  onClick={() => handleEdit(user.id)}
+                >
+                  Edit
+                </button>{" "}
                 <button
                   className="btn btn-danger"
                   onClick={() => handleDelete(user.id)}
