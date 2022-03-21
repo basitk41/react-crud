@@ -19,6 +19,10 @@ const App = () => {
     // data.push(form);
     // setUsers(data);
   };
+  const handleDelete = (id) => {
+    const data = users.filter((user) => user.id !== id);
+    setUsers(data);
+  };
   return (
     <div className="container">
       <div className="row">
@@ -29,6 +33,7 @@ const App = () => {
         />
         <Table
           users={users}
+          handleDelete={handleDelete}
         />
       </div>
     </div>
