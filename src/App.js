@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./components/form";
+import Table from "./components/table";
 const App = () => {
   const formData = { name: "", age: "" };
   const [users, setUsers] = useState([]);
@@ -25,6 +26,9 @@ const App = () => {
           form={form}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+        />
+        <Table
+          users={users}
         />
       </div>
     </div>
